@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: black;
+}
+
+.img img {
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.calc {
+    position: relative;
+    width: 400px;
+    height: 730px;
+    background: url("../image/coin.png") bottom -20px right -45px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin-left: 50px;
+    box-shadow: 0 0 20px 10px #c76b05;
+}
+
+.calc-header {
+    position: relative;
+}
+
+.inputVal textarea {
+    position: absolute;
+    right: 15px;
+    top: 145px;
+    width: 350px;
+    height: 55px;
+    color: white;
+    text-align: right;
+    font-size: 36px;
+    padding-top: 15px;
+    padding-right: 20px;
+    background: rgba(140, 64, 3, 0.7);
+    border: 2px solid orange;
+    border-radius: 30px;
+    outline: none;
+}
+
+.table {
+    width: 400px;
+    margin-top: 8px;
+    margin-left: 13px;
+}
+
+.btn {
+    margin: 5px;
+    width: 80px;
+    height: 80px;
+    border: 2px solid orange;
+    box-sizing: border-box;
+    background: rgba(128, 65, 4, 0.71);
+    border-radius: 10px;
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    box-shadow: 0 0 5px 0 #ffff00;
+    cursor: pointer;
+}
+
+.rum {
+    margin: 5px;
+    width: 268px;
+    height: 80px;
+    border: 2px solid orange;
+    box-sizing: border-box;
+    background: rgba(128, 65, 4, 0.71);
+    border-radius: 10px;
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    box-shadow: 0 0 5px 0 #ffff00;
+    cursor: pointer;
+}
+
+.null {
+    margin: 5px;
+    width: 174px;
+    height: 80px;
+    border: 2px solid orange;
+    box-sizing: border-box;
+    background: rgba(128, 65, 4, 0.71);
+    border-radius: 10px;
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    box-shadow: 0 0 5px 0 #ffff00;
+    cursor: pointer;
+}
+
+.table button:hover {
+    box-shadow: 0 0 5px 2px #ffff00;
+}
+
+.copyright {
+    color: rgba(255, 255, 255, 0.56);
+    font-size: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
