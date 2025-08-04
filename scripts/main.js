@@ -1,28 +1,37 @@
-// ADDITIONAL 8: CALCULATOR
+(() => {
+    let elements = document.getElementsByTagName("li");
+    let screen = document.querySelectorAll("p")[0];
+    let clear = document.getElementsByClassName('clear')[0];
 
-$(document).ready(function () {
+    for (let i = 0; i < elements.length; i++) {
+        if (elements[i].innerHTML === "=") {
+            elements[i].addEventListener("click", calculate(i));
+        } else {
+            elements[i].addEventListener("click", addToCurrentValue(i));
+        }
+    }
 
-    let total = $('textarea');
-    let field = $('#input');
+    function addToCurrentValue(i) {
+        return function () {
+            if (elements[i].innerHTML === " ÷ ") {
+                screen.innerHTML += " / ";
+            } else if (elements[i].innerHTML === " x ") {
+                screen.innerHTML += " * ";
+            } else {
+                screen.innerHTML += elements[i].innerHTML;
+            }
+        };
+    }
 
-    $('#1,#2,#3,#4,#5,#6,#7,#8,#9,#0,#add, #subtract, #multiply, #divide, #power, #dot, #para1, #para2').click(function () {
-        let v = $(this).val();
-        total.val(total.val() + v);
-    });
+    clear.onclick = function () {
+        screen.innerHTML = "";
+    };
 
-    // Clicking equal sign evaluates the textarea
-    $('#equal').click(function () {
-        total.val(eval(total.val()));
-    });
+    function calculate() {
+        return function () {
+            screen.innerHTML = eval(screen.innerHTML);
+        };
+    }
 
-    // ANIMATION
-    $('#rum').click(function () {
-        field.val('');
-        field.animate({transitionProperty: "width"}, 300)
-            .animate({backgroundColor: "rgb(112,51,2)"}, 500)
-            .animate({animationTimingFunction: "linear"}, 500)
-            .animate({backgroundColor: 'rgba(140, 64, 3, 0.7)'}, 2000)
-            .animate({transitionProperty: "width"}, 300);
-    });
-});
+})();
 
